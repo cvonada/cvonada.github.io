@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-------------------------------------------------------------->
+	<head>
+
+		<!--Web Tab-->
+		<link rel="icon" href="images/ow_tabicon.png">
+		<title>The Woods</title>
+
+		<!--Font-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+		<!--CSS Link-->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+
+		<!--Description-->
+		<meta name="description" content="">
+
+	</head>
+<!-------------------------------------------------------------->
+	<body>
+
+	<!-- Back Window Contents-->
+
+
+		<div id="paper-back">
+			<nav>
+				<div class="close"></div>
+				<a href="index.html">Restart</a>
+				<a href="pages/about.html">About</a>
+			</nav>
+		</div>
+<!-------------------------------------------------------------->
+	<!-- Front Window Contents-->
+		<div id="paper-window">
+
+		<!-- <div id=darkness class="overlay"></div> -->
+
+		<div class="lighton"></div>
+		
+		<div id="paper-front">
+			<!-- Hamburger -->
+				<div class="hamburger"><span></span></div>
+			<!-------------------------------------------------->	
+			<!--Story/Text-->
+						<center>
+						<div class="textBox01">
+							<p id="text"> Hello!!! I'm trying to position this box.</p>
+						</div>
+						<div class="textBox02">
+							<p id="text"> Also, I'm trying to position this box as well.</p>
+						</div>
+						<div class="textBox03">
+							<p id="text"> Here is a secret third box.</p>
+						</div>
+						</center>
+			<!-------------------------------------------------->	
+				<!-- Tree Branches -->
+				<div class="treebranches-wrapper">
+					<div class="treebranches"><img class="branch align-left slide-in" id="branch01" src="images/ow_tree01.png"></div>
+					<div class="treebranches"><img class="branch align-right slide-in" id="branch02" src="images/ow_tree02.png"></div>
+					<div class="treebranches"><img class="branch align-left slide-in" id="branch03" src="images/ow_tree01.png"></div>
+					<div class="treebranches"><img class="branch align-left slide-in" id="branch04" src="images/ow_tree01.png"></div>
+					<div class="treebranches"><img class="branch align-right slide-in" id="branch05" src="images/ow_tree01.png"></div>
+					<div class="treebranches"><img class="branch align-left slide-in" id="branch06" src="images/ow_tree01.png"></div>
+				</div>
+
+			<!-- Game Window -->
+			<div id="container">
+				<section>
+
+
+			<!-------------------------------------------------->			
+				<!-- Character -->	
+						<div class ="character"> <img id="lisaIdle" src="images/lisa_idle.gif"></div>
+						<!-- <div id="text">Hello, my name is <div id="character-name">Jane</div>. Welcome to the world. Let's go!</div> -->
+				<!-- Flashlight Icon -->
+				<div class ="flashlight"> <img id="light" src="images/ow_flashlight.png"></div>
+
+				<!-- Controller -->
+						<div id="arrow"><img id="controller" src="images/ow_control.png"></div>
+				
+				<!-- Background Image -->
+						<div id=background-container><image id="background" src="images/OW_background.png"></div>
+				</section>
+				</div>
+			</div>
+		</div>
+
+		<!--Audio-->
+		<audio autoplay><source src="audio/HauntedForest.mp3" type="audio/mpeg"></audio>
+		
+		<script src="jquery.js"></script>
+		<script src="java.js"></script>
+
+	</body>
+    
+</html>

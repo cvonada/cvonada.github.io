@@ -1,0 +1,14 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+html {
+  cursor:url(images/ow_cursor.png), auto;
+}
+
+body { 
+  font-family: 'Pangolin', cursive;
+  color: #ffffff;
+  background: rgb(0, 0, 0,);
+  margin: 0;
+  padding: 0;
+}
