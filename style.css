@@ -38,12 +38,25 @@ body {
   top: 30%;
   width: 150px;
 }
-
- #text {
+ #text01 {
   color: white;
   font-family: 'Pangolin', cursive, sans-serif;
   font-size: 16px;
+  display: none;
  }
+ #text02 {
+  color: white;
+  font-family: 'Pangolin', cursive, sans-serif;
+  font-size: 16px;
+  display: none;
+ }
+ #text03 {
+  color: white;
+  font-family: 'Pangolin', cursive, sans-serif;
+  font-size: 16px;
+  display: none;
+ }
+
  
 .overlay {
   background: #000;

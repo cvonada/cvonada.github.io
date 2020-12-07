@@ -137,3 +137,14 @@ game.addEventListener('wheel', function(e) {
 	e.preventDefault();
 });
 
+// Display Hidden Text//
+
+lisa.addEventListener('mousedown', function() {
+	var clickLisa = document.getElementById('text01').style.display='block';
+	clickLisa();
+});
+
+lisa.addEventListener('mouseup', function() {
+	var lisaQuiet = document.getElementById('text01').style.display='none';
+	lisaQuiet();
+});
