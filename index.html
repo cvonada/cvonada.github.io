@@ -21,6 +21,10 @@
 
 	<body>
 
+		<div class="intro">
+			<button>Start</button>
+		</div>
+	<div class="game">
 	<!-- Back Window Contents-->
 		<div id="paper-back">
 			<nav>
@@ -60,6 +64,7 @@
 
 				<!-- Game Window -->
 				<div class="lighton"></div>
+				<div class="overlay"></div>
 
 				<div id="container">
 					<section>	
@@ -82,8 +87,11 @@
 		</div>
 
 		<!--Audio-->
-		<audio autoplay><source src="audio/HauntedForest.mp3" type="audio/mpeg"></audio>
-		
+		<audio id="bg-audio" src="images/sad.mp3" type="audio/mpeg">
+
+		</div><!-- /game-->
+
+
 		<script src="jquery.js"></script>
 		<script src="java.js"></script>
 

@@ -51,7 +51,18 @@ var paperMenu = {
 
 paperMenu.init();
 
+
+const bgAudio = document.getElementById('bg-audio');
+
 $(document).ready(function(){
+
+	$('.intro button').click(function(){
+		$('.intro').fadeOut(function(){
+			$('.game').fadeIn();
+		});
+		bgAudio.play();
+	});
+	
 	// LG: Added Flashlight effect with new CSS
 	// Based off of https://codepen.io/jmdev/pen/oNvMMxG
 	let x,
@@ -60,16 +71,14 @@ $(document).ready(function(){
 	$(document).mousemove(function(e){
 		x = e.pageX;
 		y = e.pageY;
-
 		$('.lighton').css('background','radial-gradient(circle at ' + x + 'px ' + y + 'px, transparent, #000 200px)');
 	});
 	
 	$('.lighton').toggle();
 
 	$('#light').click(function() {
-		$('.lighton').toggle();
+		$('.lighton, .overlay').toggle();
 	});
-
 });
 
 const sliderBranch = document.querySelectorAll('.branch');
@@ -158,3 +167,4 @@ lisa.addEventListener('mouseup', function() {
 		lisaQuiet[i].style.display = "none";
 	}
 });
+

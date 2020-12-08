@@ -2,15 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 html {
+  background: #000000;
   cursor:url(images/ow_cursor.png), auto;
 }
 
 body { 
   font-family: 'Pangolin', cursive, sans-serif;
-  color: #ffffff;
   margin: 0;
   padding: 0;
-  height: 100%;
+}
+
+.intro {
+  background: #000000;
+  display: block;
+  height: 100vh;
+  width: 100%;
+}
+
+.game {
+  display: none;
 }
 
 .textbox {
