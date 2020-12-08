@@ -12,51 +12,34 @@ body {
   padding: 0;
   height: 100%;
 }
-.textBox01 {
+
+.textbox {
   display: flex;
   justify-content: center;
   position: fixed;
+  width: 150px;
+}
+.textBox01 {
   right: 53%;
   top: 5%;
-  width: 150px;
 }
 
 .textBox02 {
-  display: flex;
-  justify-content: center;
-  position: fixed;
   left: 53%;
   top: 15%;
-  width: 150px;
 }
 
 .textBox03 {
-  display: flex;
-  justify-content: center;
-  position: fixed;
   right: 53%;
   top: 30%;
-  width: 150px;
 }
- #text01 {
-  color: white;
-  font-family: 'Pangolin', cursive, sans-serif;
-  font-size: 16px;
-  display: none;
- }
- #text02 {
-  color: white;
-  font-family: 'Pangolin', cursive, sans-serif;
-  font-size: 16px;
-  display: none;
- }
- #text03 {
-  color: white;
-  font-family: 'Pangolin', cursive, sans-serif;
-  font-size: 16px;
-  display: none;
- }
 
+ .dialog {
+  color: white;
+  font-family: 'Pangolin', cursive, sans-serif;
+  font-size: 16px;
+  display: none;
+ }
  
 .overlay {
   background: #000;
@@ -110,7 +93,7 @@ body {
 
 #arrow {
   position: fixed;
-  z-index: 4;
+  z-index: 10;
 }
 
 #controller {
@@ -120,7 +103,6 @@ body {
   margin-bottom: 50px;
   margin-right: 60px;
   width: 100px;
-  z-index: 5;
 }
 
 .treebranches-wrapper {
@@ -162,7 +144,7 @@ body {
 
 #branch05 {
   top: 2400px;
-  left: 0;
+  right: 0;
 }
 
 #branch06 {

@@ -77,20 +77,21 @@ const sliderBranch = document.querySelectorAll('.branch');
 function animateStuff() {
 	sliderBranch.forEach(function(sliderBranch) {
 
-	const slideInAt = (window.scrollY + window.innerHeight) - sliderBranch.offsetHeight / 2;
+	const slideInAt = (game.scrollTop + (window.innerHeight/2)) - sliderBranch.offsetHeight / 2;
 	const imageBottom = sliderBranch.offsetTop + sliderBranch.offsetHeight;
 	const isHalfShown = slideInAt > sliderBranch.offsetTop;
-	const isNotScrolledPast = window.scrollY < imageBottom;
+	const isNotScrolledPast = game.scrollTop < imageBottom;
 	if (isHalfShown && isNotScrolledPast) {
 		sliderBranch.classList.add('active');
 	} else {
 		sliderBranch.classList.remove('active');
 	}
 });
-}
-let game = document.getElementById('paper-window');
 
-window.addEventListener('scroll', function() {
+}
+const game = document.getElementById('paper-window');
+
+game.addEventListener('scroll', function() {
 	animateStuff();
 });
 
@@ -140,11 +141,20 @@ game.addEventListener('wheel', function(e) {
 // Display Hidden Text//
 
 lisa.addEventListener('mousedown', function() {
-	var clickLisa = document.getElementById('text01').style.display='block';
-	clickLisa();
+	if (game.scrollTop < 1500) {
+		var clickLisa = document.getElementById('text01').style.display='block';
+	} else if (game.scrollTop > 1500 && game.scrollTop < 3000) {
+		var clickLisa = document.getElementById('text02').style.display='block';
+	} else {
+		var clickLisa = document.getElementById('text03').style.display='block';
+	}
+	// var clickLisa = document.getElementById('text02').style.display='block';
 });
 
 lisa.addEventListener('mouseup', function() {
-	var lisaQuiet = document.getElementById('text01').style.display='none';
-	lisaQuiet();
+	var lisaQuiet = document.getElementsByClassName('dialog');
+
+	for (let i=0; i<lisaQuiet.length-1; i++){
+		lisaQuiet[i].style.display = "none";
+	}
 });
