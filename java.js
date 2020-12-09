@@ -51,7 +51,7 @@ var paperMenu = {
 
 paperMenu.init();
 
-
+const walkAudio = document.getElementById('walk-audio');
 const bgAudio = document.getElementById('bg-audio');
 
 $(document).ready(function(){
@@ -78,6 +78,7 @@ $(document).ready(function(){
 
 	$('#light').click(function() {
 		$('.lighton, .overlay').toggle();
+		$('audio#light-audio')[0].play();
 	});
 });
 
@@ -131,16 +132,21 @@ downScroll.addEventListener('mousedown', function() {
 	interval = setInterval(() => {
 		scrollingRightAlong();
 	}, 50);
+	walkAudio.play();
 });
-	
+	walkAudio.currentTime = 0;
+
 downScroll.addEventListener('mouseup', function() {
 	lisa.src = 'images/lisa_idle.gif';
 	clearInterval(interval);
+	walkAudio.pause();
+	
 });
 
 downScroll.addEventListener('mouseleave', function() {
 	lisa.src = 'images/lisa_idle.gif';
 	clearInterval(interval);
+	walkAudio.pause();
 });
 
 game.addEventListener('wheel', function(e) {
