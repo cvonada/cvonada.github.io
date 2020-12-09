@@ -155,13 +155,20 @@ game.addEventListener('wheel', function(e) {
 
 // Display Hidden Text//
 
+const voice01 = document.getElementById('voice01-audio');
+const voice02 = document.getElementById('voice02-audio');
+const voice03 = document.getElementById('voice03-audio');
+
 lisa.addEventListener('mousedown', function() {
 	if (game.scrollTop < 1500) {
 		var clickLisa = document.getElementById('text01').style.display='block';
+		voice01.play();
 	} else if (game.scrollTop > 1500 && game.scrollTop < 3000) {
 		var clickLisa = document.getElementById('text02').style.display='block';
+		voice02.play();
 	} else {
 		var clickLisa = document.getElementById('text03').style.display='block';
+		voice03.play();
 	}
 	// var clickLisa = document.getElementById('text02').style.display='block';
 });
