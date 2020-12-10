@@ -60,7 +60,7 @@ $(document).ready(function(){
 		$('.intro').fadeOut(function(){
 			$('.game').fadeIn();
 		});
-		bgAudio.play();
+		// bgAudio.play();
 	});
 	
 	// LG: Added Flashlight effect with new CSS
@@ -78,7 +78,7 @@ $(document).ready(function(){
 
 	$('#light').click(function() {
 		$('.lighton, .overlay').toggle();
-		$('audio#light-audio')[0].play();
+		// $('audio#light-audio')[0].play();
 	});
 });
 
@@ -161,12 +161,15 @@ const voice03 = document.getElementById('voice03-audio');
 
 lisa.addEventListener('mousedown', function() {
 	if (game.scrollTop < 1500) {
+		typeWriter(0);
 		var clickLisa = document.getElementById('text01').style.display='block';
 		voice01.play();
 	} else if (game.scrollTop > 1500 && game.scrollTop < 3000) {
+		typeWriter(1);
 		var clickLisa = document.getElementById('text02').style.display='block';
 		voice02.play();
 	} else {
+		typeWriter(2);
 		var clickLisa = document.getElementById('text03').style.display='block';
 		voice03.play();
 	}
@@ -181,15 +184,27 @@ lisa.addEventListener('mouseup', function() {
 	}
 });
 
+const array = ['bunny', 'rabbit', 'alligator'];
+const object = {color:'brown', rabbit: 'orange', scales: 'none'};
+
 // Text Animation
 var i = 0;
 var txt = document.getElementsByClassName('dialog'); /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
 
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("textbox").innerHTML += txt.charAt(i);
+// const rabbit = array[1]; // rabbit
+// const scales = object['scales']; // none
+
+function typeWriter(index) {
+	// this is the text we're getting or OG text
+	const targetThatWeGetTextFrom = txt[index];
+	// the element that we're adding the above text
+	const replacingTarget = document.getElementById('text0' + (index + 1));
+	// basically a `for` loop (iterate through the array, until we hit the end of our OG text's length)
+  if (i < targetThatWeGetTextFrom.innerHTML.length) {
+    replacingTarget.innerHTML += targetThatWeGetTextFrom.innerHTML[i];
     i++;
-    setTimeout(typeWriter, speed);
+    // after a set amount of time, call the actual effect
+    setTimeout(function() {typeWriter(index)}, speed);
   }
 }
