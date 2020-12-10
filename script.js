@@ -56,7 +56,7 @@ const bgAudio = document.getElementById('bg-audio');
 
 $(document).ready(function(){
 
-	$('.intro button').click(function(){
+	$('.intro #intro-content .button').click(function(){
 		$('.intro').fadeOut(function(){
 			$('.game').fadeIn();
 		});
@@ -181,3 +181,15 @@ lisa.addEventListener('mouseup', function() {
 	}
 });
 
+// Text Animation
+var i = 0;
+var txt = document.getElementsByClassName('dialog'); /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("textbox").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
