@@ -200,11 +200,19 @@ function typeWriter(index) {
 	const targetThatWeGetTextFrom = txt[index];
 	// the element that we're adding the above text
 	const replacingTarget = document.getElementById('text0' + (index + 1));
+	console.log(i)
 	// basically a `for` loop (iterate through the array, until we hit the end of our OG text's length)
-  if (i < targetThatWeGetTextFrom.innerHTML.length) {
+  if (i < targetThatWeGetTextFrom.innerHTML.length - 1) {
+  	console.log('text')
     replacingTarget.innerHTML += targetThatWeGetTextFrom.innerHTML[i];
     i++;
     // after a set amount of time, call the actual effect
-    setTimeout(function() {typeWriter(index)}, speed);
+    setTimeout(function() {typeWriter(index, i)}, speed);
+  } else if (i === targetThatWeGetTextFrom.innerHTML.length - 1) {
+  	// Afte completing above loop, we reset i to 0, and remove our text block
+  	setTimeout(function(){
+  		i = 0;
+  		replacingTarget.innerHTML = '';
+  	}, 5000);
   }
 }
