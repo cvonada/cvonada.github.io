@@ -60,7 +60,7 @@ $(document).ready(function(){
 		$('.intro').fadeOut(function(){
 			$('.game').fadeIn();
 		});
-		// bgAudio.play();
+		bgAudio.play();
 	});
 	
 	// LG: Added Flashlight effect with new CSS
@@ -78,7 +78,7 @@ $(document).ready(function(){
 
 	$('#light').click(function() {
 		$('.lighton, .overlay').toggle();
-		// $('audio#light-audio')[0].play();
+		$('audio#light-audio')[0].play();
 	});
 });
 
@@ -184,16 +184,10 @@ lisa.addEventListener('mouseup', function() {
 	}
 });
 
-const array = ['bunny', 'rabbit', 'alligator'];
-const object = {color:'brown', rabbit: 'orange', scales: 'none'};
-
 // Text Animation
 var i = 0;
 var txt = document.getElementsByClassName('dialog'); /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
-
-// const rabbit = array[1]; // rabbit
-// const scales = object['scales']; // none
 
 function typeWriter(index) {
 	// this is the text we're getting or OG text
@@ -213,6 +207,6 @@ function typeWriter(index) {
   	setTimeout(function(){
   		i = 0;
   		replacingTarget.innerHTML = '';
-  	}, 5000);
+  	}, 1000);
   }
 }
