@@ -128,7 +128,7 @@ function scrollingRightAlong() {
 }
 
 downScroll.addEventListener('mousedown', function() {
-	lisa.src = 'images/lisa_walk.gif';
+	lisa.src = 'images/ow_character_walk.gif';
 	interval = setInterval(() => {
 		scrollingRightAlong();
 	}, 50);
@@ -137,17 +137,33 @@ downScroll.addEventListener('mousedown', function() {
 	walkAudio.currentTime = 0;
 
 downScroll.addEventListener('mouseup', function() {
-	lisa.src = 'images/lisa_idle.gif';
+	lisa.src = 'images/ow_character_idle.gif';
 	clearInterval(interval);
 	walkAudio.pause();
 	
 });
 
 downScroll.addEventListener('mouseleave', function() {
-	lisa.src = 'images/lisa_idle.gif';
+	lisa.src = 'images/ow_character_idle.gif';
 	clearInterval(interval);
 	walkAudio.pause();
 });
+
+// document.addEventListener('keydown', downFunction);
+
+// function downFunction() {
+// 	lisa.src = 'images/ow_character_walk.gif';
+// 	interval = setInterval(() => {
+// 		scrollingRightAlong();
+// 	}, 50);
+// 	walkAudio.play();
+// };
+
+// document.addEventListener('keyup', function() {
+// 	lisa.src = 'images/ow_character_idle.gif';
+// 	clearInterval(interval);
+// 	walkAudio.pause();
+// });
 
 game.addEventListener('wheel', function(e) {
 	e.preventDefault();

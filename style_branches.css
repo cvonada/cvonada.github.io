@@ -1,0 +1,127 @@
+.treebranches-wrapper {
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+    z-index: 3;
+}
+  
+.treebranches {
+    position: relative;
+    pointer-events: none;
+}
+  
+.branch {
+    position: absolute;
+    width: 250px;
+}
+  
+#branch01 {
+    top: 0;
+    left: 0;
+}
+  
+#branch02 {
+    top: 400px;
+    right: 0;
+}
+  
+#branch03 {
+    top: 800px;
+    left: 0;
+}
+  
+#branch04 {
+    top: 1200px;
+    right: 0;
+}
+  
+#branch05 {
+    top: 1600px;
+    left: 0;
+}
+  
+#branch06 {
+    top: 2000px;
+    right: 0;
+}
+
+#branch07 {
+    top: 2400px;
+    left: 0;
+}
+
+#branch08 {
+    top: 2800px;
+    right: 0;
+}
+
+#branch09 {
+    top: 3200px;
+    left: 0;
+}
+
+#branch10 {
+    top: 3600px;
+    right: 0;
+}
+
+#branch11 {
+    top: 4000px;
+    left: 0;
+}
+
+#branch12 {
+    top: 4400px;
+    right: 0;
+}
+
+#branch13 {
+    top: 4800px;
+    left: 0;
+}
+
+#branch14 {
+    top: 5200px;
+    right: 0;
+}
+
+#branch15 {
+    top: 5600px;
+    left: 0;
+}
+
+#branch16{
+    top: 6000px;
+    right: 0;
+}
+
+.branchborder {
+    display: flex;
+    justify-content: center;
+}
+
+#border {
+    pointer-events: none;
+    position: fixed;
+    width: 1000px;
+    height: 100vh;
+    z-index: 4;
+}
+
+.slide-in {
+    opacity: 0;
+    transition: all .5s;
+}
+  
+.align-left.slide-in {
+    transform: translateX(-100%) scale(0.95);
+}
+  
+.align-right.slide-in {
+    transform: translateX(100%) scale(0.95);
+}
+  
+.slide-in.active {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}
