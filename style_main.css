@@ -175,7 +175,7 @@ p {
 
 #background {
   width: 1000px; 
-  background-repeat: repeat-y;
+  background-repeat: none;
 }
 
 #paper-front {
