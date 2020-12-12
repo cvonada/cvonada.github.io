@@ -1,3 +1,4 @@
+/* Tree Branches */
 .treebranches-wrapper {
     position: relative;
     margin: auto;
@@ -124,4 +125,53 @@
 .slide-in.active {
     opacity: 1;
     transform: translateX(0%) scale(1);
+}
+
+/* Bushes */
+.bush-wrapper {
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+    z-index: 2;
+}
+.bushes {
+    position: relative;
+    pointer-events: none;
+}
+
+.bush {
+    position: absolute;
+    width: 425px;
+}
+
+#bush01 {
+    top: -40px;
+    left: 0;
+}
+
+#bush02 {
+    top: 300px;
+    right: 0;
+}
+
+#bush03 {
+    top: 600px;
+    left: 0;
+}
+
+#bush04 {
+    top: -150px;
+    right: 0;
+    width: 300px;
+}
+
+#bush07 {
+    top: 900px;
+    right: 0;
+}
+
+#bush08 {
+    top: 850px;
+    left: 0;
+    width: 300px;
 }
