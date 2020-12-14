@@ -42,6 +42,14 @@ p {
   right: 53%;
   top: 30%;
 }
+.textBox04 {
+  right: 45%;
+  top: 2%;
+}
+.textBox05 {
+  right: 53%;
+  top: 5%;
+}
 
  .dialog {
   color: white;
@@ -257,12 +265,6 @@ p {
 }
 
 /* Scroll Bar*/
-/* width */
-
 ::-webkit-scrollbar {
   width: 0px;
-}
-
-/* .character {
-  cursor:url(images/cursor_animated.gif), auto;
-} */
+} 

@@ -107,14 +107,6 @@ game.addEventListener('scroll', function() {
 
 animateStuff();
 
-// let character = 'Cat';
-
-// if(character == 'Dog') {
-// 	document.getElementById('character-name').innerHTML = 'Tom';
-// } else {
-// 	document.getElementById('character-name').innerHTML = 'Jane';
-// }
-
 //Button Scroll Code
 
 let downScroll = document.getElementById('controller');
@@ -149,31 +141,16 @@ downScroll.addEventListener('mouseleave', function() {
 	walkAudio.pause();
 });
 
-// document.addEventListener('keydown', downFunction);
-
-// function downFunction() {
-// 	lisa.src = 'images/ow_character_walk.gif';
-// 	interval = setInterval(() => {
-// 		scrollingRightAlong();
-// 	}, 50);
-// 	walkAudio.play();
-// };
-
-// document.addEventListener('keyup', function() {
-// 	lisa.src = 'images/ow_character_idle.gif';
-// 	clearInterval(interval);
-// 	walkAudio.pause();
-// });
-
 game.addEventListener('wheel', function(e) {
 	e.preventDefault();
 });
 
 // Display Hidden Text//
-
 const voice01 = document.getElementById('voice01-audio');
 const voice02 = document.getElementById('voice02-audio');
 const voice03 = document.getElementById('voice03-audio');
+const voice04 = document.getElementById('voice04-audio');
+const voice05 = document.getElementById('voice05-audio');
 
 lisa.addEventListener('mousedown', function() {
 	if (game.scrollTop < 1500) {
@@ -184,12 +161,19 @@ lisa.addEventListener('mousedown', function() {
 		typeWriter(1);
 		var clickLisa = document.getElementById('text02').style.display='block';
 		voice02.play();
-	} else {
+	} else if (game.scrollTop > 3000 && game.scrollTop < 4500) {
 		typeWriter(2);
 		var clickLisa = document.getElementById('text03').style.display='block';
 		voice03.play();
+	} else if (game.scrollTop > 4500 && game.scrollTop < 5000) {
+		typeWriter(3);
+		var clickLisa = document.getElementById('text04').style.display='block';
+		voice04.play();
+	} else {
+		typeWriter(4);
+		var clickLisa = document.getElementById('text05').style.display='block';
+		voice05.play();
 	}
-	// var clickLisa = document.getElementById('text02').style.display='block';
 });
 
 lisa.addEventListener('mouseup', function() {
