@@ -145,7 +145,6 @@ downScroll.addEventListener('mouseleave', function() {
 });
 
 document.addEventListener('keydown', function(e) {
-	console.log(interval)
 	if(e.keyCode === 40 && interval === null) {
 		lisa.src = 'images/ow_character_walk.gif';
 		interval = setInterval(() => {
@@ -188,7 +187,6 @@ lisa.addEventListener('mousedown', function() {
 		var clickLisa = document.getElementById('text02').style.display='block';
 		voice03.play();
 	} else if (game.scrollTop > 4500 && game.scrollTop < 5000) {
-		console.log('are we called')
 		typeWriter(3);
 		var clickLisa = document.getElementById('text03').style.display='block';
 		voice04.play();
@@ -220,7 +218,7 @@ function typeWriter(index) {
 	// this is the text we're getting or OG text
 	const targetThatWeGetTextFrom = txt[index];
 	// the element that we're adding the above text
-	const replacingTarget = document.getElementById('text0' + (index));
+	const replacingTarget = document.getElementById('text' + (index < 10 ? '0' + index : index));
 	// console.log(i)
 	// basically a `for` loop (iterate through the array, until we hit the end of our OG text's length)
   if (i < targetThatWeGetTextFrom.innerHTML.length - 1) {
