@@ -288,3 +288,71 @@
     top: 6550px;
     width: 125px;
 }
+
+/* Spirit */
+ .spirit-wrapper{
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+    z-index: 2;
+}
+
+.spirits {
+    position: relative;
+    
+}
+
+.spirit {
+    position: absolute;
+} 
+
+#idle {
+    top: 2000px;
+    width: 100px;
+    left: 200px;
+}
+
+#idle02 {
+    top: 5100px;
+    width: 100px;
+    left: 600px;
+}
+
+/* Foot Prints */
+.prints-wrapper {
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+    z-index: 2;
+}
+
+.prints {
+    position: relative;
+}
+
+.print {
+    position: absolute;
+}
+
+#print01 {
+    top: 1080px;
+    width: 50px;
+    left: 350px;
+}
+
+#print02 {
+    top: 3000px;
+    width: 50px;
+    left: 600px;
+}
+
+#print03 {
+    top: 4200px;
+    width: 100px;
+    left: 675px;
+}
+#print04 {
+    top: 6000px;
+    width: 150px;
+    left: 200px;
+}

@@ -21,6 +21,12 @@ p {
   display: none;
 }
 
+.text {
+  color: white;
+  font-family: 'Pangolin', cursive, sans-serif;
+  font-size: 16px;
+}
+
 .textbox {
   display: flex;
   justify-content: center;
@@ -29,7 +35,7 @@ p {
   z-index: 50;
 }
 
-.textbox00 {
+.textBox00 {
   right: 45%;
   top: 2%;
 }
@@ -55,6 +61,33 @@ p {
 .textBox05 {
   right: 53%;
   top: 5%;
+}
+
+.textBox06 {
+  right: 53%;
+  top: 5%;
+}
+
+.textBox07 {
+  left: 53%;
+  top: 15%;
+}
+
+.textBox08 {
+  right: 53%;
+  top: 5%;
+}
+.textBox09 {
+  left: 53%;
+  top: 15%;
+}
+.textBox10 {
+  right: 53%;
+  top: 30%;
+}
+.textBox11 {
+  left: 53%;
+  top: 15%;
 }
 
  .dialog {
@@ -107,6 +140,7 @@ p {
   width: 100px;
 }
 
+
 #flashlight {
   position: fixed;
   z-index: 11;
@@ -120,6 +154,30 @@ p {
   margin-right: 75px;
   width: 80px;
   z-index: 11;
+}
+
+.mute {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 50px;
+  margin-left: 60px
+}
+ 
+#clickOn {
+  border: 3px solid white;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+}
+#clickOff {
+  border: 3px solid white;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  margin: 3px;
 }
 
 #arrow {

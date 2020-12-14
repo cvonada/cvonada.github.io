@@ -54,17 +54,30 @@
 				<div id="paper-front">
 					<div style="display:none">
 							<div class="textbox textBox00 hidden">
-							<p class="dialog"> It's really dark, I should turn on my flashlight. </p></div>
+								<p class="dialog"> It's really dark, I should turn on my flashlight. </p></div>
 							<div class="textbox textBox01 hidden">
-							<p class="dialog"> I shouldn't wonder too far, but I need to make sure. </p></div>
+								<p class="dialog"> I shouldn't wonder too far, but I need to make sure. </p></div>
 							<div class="textbox textBox02 hidden">
-							<p class="dialog"> He has to be out here somewhere. </p></div>
+								<p class="dialog"> He has to be out here somewhere. </p></div>
 							<div class="textbox textBox03 hidden">
-							<p class="dialog"> I'm not sure I know how to get back from here. </p></div>
+								<p class="dialog"> I'm not sure I know how to get back from here. </p></div>
 							<div class="textbox textBox04 hidden">
-							<p class="dialog"> I think I see something up ahead. </p></div>
+								<p class="dialog"> I think I see something up ahead. </p></div>
 							<div class="textbox textBox05 hidden">
-							<p class="dialog"> I want to go home.</p></div>
+								<p class="dialog"> I want to go home.</p></div>
+							<div class="textbox textBox06 hidden">
+								<p class="dialog"> What was that??</p></div>
+							<div class="textbox textBox07 hidden">
+								<p class="dialog"> Did you see that??</p></div>
+							<div class="textbox textBox08 hidden">
+								<p class="dialog"> Evidence! My dog was here!!</p></div>
+							<div class="textbox textBox09 hidden">
+								<p class="dialog"> Look at his cute paw prints..</p></div>
+							<div class="textbox textBox10 hidden">
+								<p class="dialog"> These lead into the bush, maybe he is in there?</p></div>	
+							<div class="textbox textBox11 hidden">
+								<p class="dialog"> Strange marks. I think I lost the trail.</p></div>
+
 					</div>
 
 					<!-- Hamburger -->
@@ -84,6 +97,18 @@
 							<p id="text04"></p></div>
 						<div class="textbox textBox05">
 							<p id="text05"></p></div>
+						<div class="textbox textBox06">
+							<p id="text06"></p></div>
+						<div class="textbox textBox07">
+							<p id="text07"></p></div>
+						<div class="textbox textBox08">
+							<p id="text08"></p></div>
+						<div class="textbox textBox09">
+							<p id="text09"></p></div>
+						<div class="textbox textBox10">
+							<p id="text10"></p></div>
+						<div class="textbox textBox11">
+							<p id="text11"></p></div>
 					</center>
 
 					<!-- Tree Branches -->
@@ -140,12 +165,25 @@
 						</div>
 
 					<!--Spirit-->
-					
+					<div class="spirit-wrapper">
+						<div class="spirits"><img class="spirit" id="idle" src="images/spirt_idle.gif"></div>
+					</div>
 
-					
+					<div class="spirit-wrapper">
+						<div class="spirits"><img class="spirit" id="idle02" src="images/spirt_idle.gif"></div>	
+					</div>
+
+					<!-- Foot Prints -->
+					<div class="prints-wrapper">
+							<div class="prints"><img class="print" id="print01" src="images/footprints01.png"></div>
+							<div class="prints"><img class="print" id="print02" src="images/footprints02.png"></div>
+							<div class="prints"><img class="print" id="print03" src="images/footprints03.png"></div>
+							<div class="prints"><img class="print" id="print04" src="images/footprints04.png"></div>
+					</div>
+
 					<!-- Game Window -->
 					<div class="lighton"></div>
-					<div class="overlay"></div>
+					<!-- <div class="overlay"></div> -->
 
 					<div id="container">
 						<section>	
@@ -157,6 +195,14 @@
 							
 							<!-- Controller -->
 							<div id="arrow"><img id="controller" src="images/ow_control.png"></div>
+
+							<!-- Mute Button -->
+							<div class= 'mute'>
+								<div id="clickOn"> </div>
+								<div class='text'>Off</div>
+								<div id="clickOff"> </div>
+								<div class='text'>On</div>
+							</div>
 							
 							<!-- Background Image -->
 							<div id=background-container><image id="background" src="images/ow_background.png"></div>
