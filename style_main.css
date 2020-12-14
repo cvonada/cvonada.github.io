@@ -17,6 +17,11 @@ p {
   color: white;
 }
 
+h1 {
+  color: white;
+  font-family: 'Pangolin', cursive, sans-serif;
+  font-size: 12px;
+}
 .game {
   display: none;
 }
@@ -86,6 +91,11 @@ p {
   top: 30%;
 }
 .textBox11 {
+  left: 53%;
+  top: 15%;
+}
+
+.textBox12 {
   left: 53%;
   top: 15%;
 }
@@ -162,7 +172,8 @@ p {
   position: fixed;
   bottom: 0;
   margin-bottom: 50px;
-  margin-left: 60px
+  margin-left: 60px;
+  z-index: 10;
 }
  
 #clickOn {

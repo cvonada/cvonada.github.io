@@ -284,6 +284,15 @@ foot04.addEventListener('mousedown', function() {
 	voice04.play();
 }); 
 
+// Bush Text
+let bush01= document.getElementById('bush18');
+
+bush01.addEventListener('mousedown', function() {
+	typeWriter(12);
+	var clickLisa = document.getElementById('text12').style.display='block';
+	voice05.play();
+}); 
+
 //Mute Button
 var muteOn = document.getElementById("clickOn");
 var muteOff = document.getElementById("clickOff");

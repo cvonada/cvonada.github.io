@@ -136,7 +136,6 @@
 }
 .bushes {
     position: relative;
-    pointer-events: none;
 }
 
 .bush {
@@ -354,5 +353,54 @@
 #print04 {
     top: 6000px;
     width: 150px;
+    left: 200px;
+}
+/* Tree Stumps */
+.treestumps {
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+    z-index: 2;
+}
+.treestump {
+    position: relative;
+}
+.stump {
+    position: absolute
+}
+#stump01 {
+    top: 350px;
+    width: 60px;
+    left: 700px;
+}
+#stump02 {
+    top: 1242px;
+    width: 150px;
+}
+#stump03 {
+    top: 1925px;
+    width: 125px;
+}
+#stump04 {
+    top: 2655px;
+    width: 100px;
+}
+#stump05 {
+    top: 200px;
+    width: 100px;
+}
+#stump06 {
+    top: 710px;
+    width: 150px;
+    left: 125px;
+}
+#stump07 {
+    top: 1600px;
+    width: 60px;
+    left: 200px;
+}
+#stump08 {
+    top: 3600px;
+    width: 175px;
     left: 200px;
 }
