@@ -112,12 +112,12 @@ animateStuff();
 
 let downScroll = document.getElementById('controller');
 let lisa = document.getElementById('lisaIdle');
-let interval = 0;
+let interval = null;
 
 function scrollingRightAlong() {
 	const currentScroll= game.scrollTop;
 	game.scrollTop = currentScroll + 10;
-	console.log(currentScroll);
+	// console.log(currentScroll);
 }
 
 downScroll.addEventListener('mousedown', function() {
@@ -132,6 +132,7 @@ downScroll.addEventListener('mousedown', function() {
 downScroll.addEventListener('mouseup', function() {
 	lisa.src = 'images/ow_character_idle.gif';
 	clearInterval(interval);
+	interval = null;
 	walkAudio.pause();
 	
 });
@@ -139,7 +140,26 @@ downScroll.addEventListener('mouseup', function() {
 downScroll.addEventListener('mouseleave', function() {
 	lisa.src = 'images/ow_character_idle.gif';
 	clearInterval(interval);
+	interval = null;
 	walkAudio.pause();
+});
+
+document.addEventListener('keydown', function(e) {
+	console.log(interval)
+	if(e.keyCode === 40 && interval === null) {
+		lisa.src = 'images/ow_character_walk.gif';
+		interval = setInterval(() => {
+			scrollingRightAlong();
+		}, 50);
+		walkAudio.play();
+	}
+});
+
+document.addEventListener('keyup', function(e) {
+	lisa.src = 'images/ow_character_idle.gif';
+	clearInterval(interval);
+	walkAudio.pause();
+	interval = null;
 });
 
 game.addEventListener('wheel', function(e) {
@@ -156,22 +176,27 @@ const voice05 = document.getElementById('voice05-audio');
 lisa.addEventListener('mousedown', function() {
 	if (game.scrollTop < 1500) {
 		typeWriter(0);
-		var clickLisa = document.getElementById('text01').style.display='block';
+		var clickLisa = document.getElementById('text00').style.display='block';
 		voice01.play();
 	} else if (game.scrollTop > 1500 && game.scrollTop < 3000) {
 		typeWriter(1);
-		var clickLisa = document.getElementById('text02').style.display='block';
+		var clickLisa = document.getElementById('text01').style.display='block';
 		voice02.play();
 	} else if (game.scrollTop > 3000 && game.scrollTop < 4500) {
 		typeWriter(2);
-		var clickLisa = document.getElementById('text03').style.display='block';
+		var clickLisa = document.getElementById('text02').style.display='block';
 		voice03.play();
 	} else if (game.scrollTop > 4500 && game.scrollTop < 5000) {
+		console.log('are we called')
 		typeWriter(3);
-		var clickLisa = document.getElementById('text04').style.display='block';
+		var clickLisa = document.getElementById('text03').style.display='block';
 		voice04.play();
-	} else {
+	} else if((game.scrollTop > 5000 && game.scrollTop < 6000)) {
 		typeWriter(4);
+		var clickLisa = document.getElementById('text04').style.display='block';
+		voice05.play();
+	} else {
+		typeWriter(5);
 		var clickLisa = document.getElementById('text05').style.display='block';
 		voice05.play();
 	}
@@ -194,7 +219,7 @@ function typeWriter(index) {
 	// this is the text we're getting or OG text
 	const targetThatWeGetTextFrom = txt[index];
 	// the element that we're adding the above text
-	const replacingTarget = document.getElementById('text0' + (index + 1));
+	const replacingTarget = document.getElementById('text0' + (index));
 	// console.log(i)
 	// basically a `for` loop (iterate through the array, until we hit the end of our OG text's length)
   if (i < targetThatWeGetTextFrom.innerHTML.length - 1) {
