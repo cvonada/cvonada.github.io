@@ -28,6 +28,12 @@ p {
   width: 150px;
   z-index: 50;
 }
+
+.textbox00 {
+  right: 45%;
+  top: 2%;
+}
+
 .textBox01 {
   right: 53%;
   top: 5%;
@@ -43,8 +49,8 @@ p {
   top: 30%;
 }
 .textBox04 {
-  right: 45%;
-  top: 2%;
+  left: 53%;
+  top: 15%;
 }
 .textBox05 {
   right: 53%;
@@ -64,7 +70,7 @@ p {
   pointer-events: none;
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   z-index: 4;
 }
 

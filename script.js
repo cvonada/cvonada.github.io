@@ -52,13 +52,14 @@ var paperMenu = {
 paperMenu.init();
 
 const walkAudio = document.getElementById('walk-audio');
-const bgAudio = document.getElementById('bg-audio');
+const bgAudio = document.getElementById('bg-audio');;
 
 $(document).ready(function(){
 
 	$('.intro #intro-content .button').click(function(){
 		$('.intro').fadeOut(function(){
 			$('.game').fadeIn();
+			
 		});
 		bgAudio.play();
 	});
@@ -116,7 +117,7 @@ let interval = 0;
 function scrollingRightAlong() {
 	const currentScroll= game.scrollTop;
 	game.scrollTop = currentScroll + 10;
-	// console.log(currentScroll);
+	console.log(currentScroll);
 }
 
 downScroll.addEventListener('mousedown', function() {
@@ -194,10 +195,10 @@ function typeWriter(index) {
 	const targetThatWeGetTextFrom = txt[index];
 	// the element that we're adding the above text
 	const replacingTarget = document.getElementById('text0' + (index + 1));
-	console.log(i)
+	// console.log(i)
 	// basically a `for` loop (iterate through the array, until we hit the end of our OG text's length)
   if (i < targetThatWeGetTextFrom.innerHTML.length - 1) {
-  	console.log('text')
+  	// console.log('text')
     replacingTarget.innerHTML += targetThatWeGetTextFrom.innerHTML[i];
     i++;
     // after a set amount of time, call the actual effect
